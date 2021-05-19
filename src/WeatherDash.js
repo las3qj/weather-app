@@ -5,9 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 const API_KEY = process.env.REACT_APP_api_key;
-const DAYS = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 
-function WeatherDash(props) {
+function WeatherDash() {
     const [search, setSearch] = useState(22903);
     const [weather, setWeather] = useState(null);
     const [daily, setDaily] = useState(true);
