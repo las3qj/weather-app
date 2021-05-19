@@ -7,13 +7,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function WeatherBox(props) {
+function WeatherBox({children}) {
     const classes = useStyles();
     return(
         <Grid container className={classes.root} spacing={2}>
             <Grid item xs={12}>
                 <Grid container justify="center" spacing={2}>
-                    {props.children}
+                    {children}
                 </Grid>
             </Grid>            
         </Grid>

@@ -20,13 +20,13 @@ const useStyles = makeStyles({
     },
   });
 
-function WeatherCard(props) {
+function WeatherCard({weather, type}) {
     const classes = useStyles();
-    let exSec = props.weather.dt;
+    let exSec = weather.dt;
     var d = new Date(0);
     d.setUTCSeconds(exSec);
     let title;
-    if(props.type === "day") {
+    if(type === "day") {
       title = DAYS[d.getDay()];
     }
     else {
@@ -40,13 +40,13 @@ function WeatherCard(props) {
               {title}
             </Typography>
             <Typography className={classes.pos} color="textSecondary">
-              {props.weather.weather[0].main}
+              {weather.weather[0].main}
               <br/>
-              <i class={getIcon(props.weather.weather[0].main)}></i>
+              <i class={getIcon(weather.weather[0].main)}></i>
             </Typography>
             <Typography variant="body2" component="p">
-              {props.type==="day" ? props.weather.temp.max.toString()+"° / "+props.weather.temp.min.toString()+"°" 
-              : props.weather.temp.toString()+"°"}
+              {type==="day" ? props.weather.temp.max.toString()+"° / "+ weather.temp.min.toString()+"°" 
+              : weather.temp.toString()+"°"}
             </Typography>
           </CardContent>
       </Card>
