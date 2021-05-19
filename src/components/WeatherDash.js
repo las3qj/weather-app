@@ -16,7 +16,7 @@ function WeatherDash() {
     }
     useEffect(() => {
         const getAPI = async () => {
-            console.log("here");
+            // console.log("here");
             let res = await getCoord().then(resp => getWeather(resp.coord)).then(res => setWeather(res)).catch(e => {return;});
         }
         const getCoord = async () => {
