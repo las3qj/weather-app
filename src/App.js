@@ -1,5 +1,5 @@
 import React from "react";
-import WeatherDash from "./WeatherDash";
+import WeatherDash from "./components/WeatherDash";
 
 
 function App() {

@@ -2,7 +2,7 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import './css/weather-icons.css';
+import '../css/weather-icons.css';
 const DAYS = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 const ICONS = ["wi wi-day-thunderstorm", "wi wi-day-showers", "wi wi-day-rain", "wi wi-day-snow", 
   "wi wi-day-sunny", "wi wi-day-cloudy", "wi wi-day-haze"];
